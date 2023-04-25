@@ -58,6 +58,3 @@ if st.button("Get Predictions"):
     suggestion = get_predictions(input_image =img_array)
     st.success(suggestion)
 
-if st.button("Get Predictions"):
-    suggestion = get_predictions(input_image =img_array)
-    st.success(suggestion)
