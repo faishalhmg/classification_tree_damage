@@ -20,6 +20,7 @@ print(value)
 
 if value == 1:
     tflite_interpreter = tf.lite.Interpreter(model_path='convertmodel7504.tflite')
+    tflite_interpreter.allocate_tensors()
 
 def set_input_tensor(interpreter, image):
   """Sets the input tensor."""
