@@ -44,7 +44,7 @@ def get_predictions(input_image):
   
 uploaded_file = st.file_uploader("Upload a Image", type=["jpg","png", 'jpeg'])
 if uploaded_file is not None:
-    with open(os.path.join("tempDir",uploaded_file.name),"wb") as f:
+    with open(os.path.join(uploaded_file.name),"wb") as f:
          f.write(uploaded_file.getbuffer())
     path = os.path.join("tempDir",uploaded_file.name)
     img = tf.keras.preprocessing.image.load_img(path , grayscale=False, color_mode='rgb', target_size=(224,224,3), interpolation='nearest')
