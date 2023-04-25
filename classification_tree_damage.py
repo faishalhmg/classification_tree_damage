@@ -19,7 +19,7 @@ value = st.sidebar.selectbox("Model", options, format_func=lambda x: display[x])
 print(value)
 
 if value == 1:
-        tflite_interpreter = tf.lite.Interpreter(model_path='convertmodel7504.tflite')
+    tflite_interpreter = tf.lite.Interpreter(model_path='convertmodel7504.tflite')
 
 def set_input_tensor(interpreter, image):
   """Sets the input tensor."""
