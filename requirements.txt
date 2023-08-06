@@ -1,4 +1,0 @@
-flask
-tensorflow-cpu
-opencv-python-headless
-pillow
