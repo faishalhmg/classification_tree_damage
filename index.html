@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cats vs Dogs Image Classification</title>
+</head>
+<body>
+    <h1>Cat vs Dogs Image Classification</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .png, .jpeg">
+        <input type="submit" value="Get Predictions">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        {% if image_path %}
+            <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded Image">
+        {% endif %}
+    {% endif %}
+</body>
+</html>
